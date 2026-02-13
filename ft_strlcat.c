@@ -12,5 +12,5 @@ unsigned int ft_strncat(char *dest, char *src, unsigned int size)
 		index++;
 	}
 	dest[i] = '\0';
-    return ((ft_strlen(dest) + ft-strlen(src)));
+    return ((ft_strlen(dest) + ft_strlen(src)));
 }
