@@ -17,7 +17,21 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char	ft_strtrim(char const *s1, char c)
+int	ft_check_string(char const *string, char const letter)
+{
+	int	i;
+
+	i = 0;
+	while (string[i])
+	{
+		if (string[i] == letter)
+			return(1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	int		index;
@@ -26,18 +40,19 @@ char	ft_strtrim(char const *s1, char c)
 
 	index = 0;
 	total_start = 0;
-	total_end = 0;
-	while (s1[index] == c)
+	total_end = ft_strlen(s1);
+	while (s1[index] && ft_check_string(set, s1[index]))
 	{
 		total_start++;
 		index++;
 	}
 	while (s1[index])
 		index++;
-	while (s1[index] == c)
+	index--;
+	while (index > 0 && ft_check_string(set, s1[index]))
 	{
 		index--;
-		total_end++;
+		total_end--;
 	}
-	return (ft_substr(s1, total_start, (ft_strlen(s1) - total_start - total_end)));
+	return (ft_substr(s1, total_start, (total_end - total_start)));
 }
