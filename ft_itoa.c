@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 int	ft_set_sign(int *n)
 {
 	int	sign;
