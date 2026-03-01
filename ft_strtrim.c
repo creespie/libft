@@ -33,14 +33,13 @@ int	ft_check_string(char const *string, char const letter)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
 	int		index;
 	int		total_start;
 	int		total_end;
 
 	index = 0;
 	total_start = 0;
-	total_end = ft_strlen(s1);
+	total_end = ft_strlen((char *)s1);
 	while (s1[index] && ft_check_string(set, s1[index]))
 	{
 		total_start++;

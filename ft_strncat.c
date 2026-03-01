@@ -1,3 +1,5 @@
+#include "libft.h"
+
 char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
@@ -11,5 +13,6 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 		i++;
 		index++;
 	}
-	dest[i] = '\0'
+	dest[i] = '\0';
+	return (dest);
 }

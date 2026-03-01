@@ -10,4 +10,5 @@ void	*ft_striter(char *s, void (*f)(char *))
 		f(&s[index]);
 		index++;
 	}
+	return (NULL);
 }

@@ -1,3 +1,5 @@
+#include "libft.h"
+
 void	*ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int		index;
@@ -8,4 +10,5 @@ void	*ft_striteri(char *s, void (*f)(unsigned int, char *))
 		f(index, &s[index]);
 		index++;
 	}
+	return (NULL);
 }
