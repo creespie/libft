@@ -8,7 +8,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	*ft_memccpy(void dest, const void src, int c,
+void	*ft_memccpy(void *dest, const void *src, int c,
 size_t n)
 {
 	unsigned char	*pdest;
@@ -22,7 +22,7 @@ size_t n)
 	i = 0;
 	while (i < n)
 	{
-		pdst[i] = psrc[i];
+		pdest[i] = psrc[i];
 		if (psrc[i] == needle)
 			return (pdest + i + 1);
 		i++;
