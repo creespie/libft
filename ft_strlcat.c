@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 12:55:17 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 15:42:33 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 17:33:33 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 	if (size == 0)
 		return (ft_strlen(src));
 	else if (size <= i)
-		return(size + ft_strlen(src));
+		return (size + ft_strlen(src));
 	while (src[index] && i < size - 1)
 	{
 		dest[i] = src[index];
 		i++;
 		index++;
-	}	
+	}
 	dest[i] = '\0';
 	return (return_val);
 }
