@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 12:45:39 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 12:45:40 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 13:42:06 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	*ft_memmove(void *s1, const void *s2, size_t len)
 	unsigned char	*ptr2;
 	size_t			i;
 
-	if (ptr1 == NULL && ptr2 == NULL)
-		return (NULL);
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
+	if (ptr1 == NULL && ptr2 == NULL)
+		return (NULL);
 	i = 0;
 	if (ptr1 < ptr2)
 	{
