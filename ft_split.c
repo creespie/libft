@@ -1,21 +1,15 @@
-//
-// Description
-// Allocates (with malloc(3)) and returns an array of strings
-// obtained by splitting ’s’
-// using the character ’c’ as a delimiter.
-// The array must be ended by a NULL pointer.
-//
-// Parameters
-// #1. The string to be split.
-// #2. The delimiter character.
-//
-// Return
-// The array of new strings resulting from the split.
-// NULL if the allocation fails.
-//
-// External functs.
-// malloc, free
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:49:52 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:49:53 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_count_words(char const *string, char c)
@@ -63,12 +57,12 @@ char	**ft_split(char const *string, char c)
 	char	**mat;
 	int		word_count;
 	int		index_words;
-	
+
 	index_words = 0;
 	word_count = ft_count_words(string, c);
 	if (word_count == 0)
 		return (NULL);
-	mat = malloc((word_count + 1)* sizeof(char *));
+	mat = malloc((word_count + 1) * sizeof(char *));
 	if (!mat)
 		return (NULL);
 	while (index_words < word_count)

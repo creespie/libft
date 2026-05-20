@@ -1,15 +1,18 @@
-// param
-// #1. The adress of a pointer to an element.
-// #2. The adress of the function used to iterate on
-// the list.
-
-// descr
-// Iterates the list ’lst’ and applies the function
-// ’f’ to the content of each element.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:27:04 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:27:15 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst == NULL || f == NULL)
 		return ;

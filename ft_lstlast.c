@@ -1,12 +1,18 @@
-
-// param
-// #1. The beginning of the list.
-// desc
-// Returns the last element of the list.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:27:29 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:28:42 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst == NULL)
 		return (NULL);
@@ -14,5 +20,5 @@ t_list *ft_lstlast(t_list *lst)
 	{
 		lst = lst->next;
 	}
-	return(lst);
+	return (lst);
 }

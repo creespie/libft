@@ -1,7 +1,15 @@
-//
-// ft_isalnum.c check if a is an alphabet or a number.
-// If it's true it returns 1 or 0.
-//
+/* ************************************************************************** */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   ft_isalnum.c									   :+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: lurossi <lurossi@student.42.fr>			+#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2026/05/20 12:18:09 by lurossi		   #+#	#+#			 */
+/*   Updated: 2026/05/20 12:18:14 by lurossi		  ###   ########.fr	   */
+/*																			*/
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isalnum(int c)

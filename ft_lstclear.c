@@ -1,22 +1,21 @@
-// param
-// #1. The adress of a pointer to an element.
-// #2. The adress of the function used to delete the
-// content of the element.
-
-// descr
-// Deletes and frees the given element and every
-// successor of that element, using the function ’del’
-// and free(3).
-// Finally, the pointer to the list must be set to
-// NULL.
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:26:33 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:28:00 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *temp;
-	t_list *start;
+	t_list	*temp;
+	t_list	*start;
 
 	start = *lst;
 	if (*lst == NULL || del == NULL)

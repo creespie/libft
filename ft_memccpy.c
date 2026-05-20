@@ -1,10 +1,15 @@
-// The memccpy() function copies bytes from string src to string dst.  
-// If the character c (as converted to an unsigned char)
-// occurs in the string src, 
-// the copy stops and a pointer to the byte after the copy of c
-// in the string dst is returned.
-// Otherwise, n bytes are copied, and a NULL pointer is returned.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:30:53 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:30:55 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 

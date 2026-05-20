@@ -1,29 +1,24 @@
-// param
-// #1. The adress of a pointer to an element.
-// #2. The adress of the function used to iterate on
-// the list.
-// #3. The adress of the function used to delete the
-// content of an element if needed.
-
-// descr
-// Iterates the list ’lst’ and applies the function
-// ’f’ to the content of each element. Creates a new
-// list resulting of the successive applications of
-// the function ’f’. The ’del’ function is used to
-// delete the content of an element if needed.
-
-// return
-// The new list. NULL if the allocation fails.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:28:50 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:29:55 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *copy;
-	t_list *check;
+	t_list	*copy;
+	t_list	*check;
 
 	if (lst == NULL)
-		return NULL;
+		return (NULL);
 	copy = ft_lstnew(f(lst->content));
 	if (!copy)
 		return (NULL);

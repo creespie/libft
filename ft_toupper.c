@@ -1,13 +1,27 @@
-char    *ft_toupper(char *str)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:59:10 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 13:01:13 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (str[i])
-    {
-        if (str[i] >= 'a' && str[i] <= 'z')
-            str[i] -= 32;
-        i++;
-    }
-    return (str);
+#include "libft.h"
+
+char	*ft_toupper(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
 }

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:50:10 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:50:10 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	index;
@@ -16,4 +28,3 @@ char *ft_strcat(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-

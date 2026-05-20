@@ -1,12 +1,18 @@
-
-// param
-// #1. The beginning of the list.
-// desc
-// Counts the number of elements in a list.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:30:27 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:32:32 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
 

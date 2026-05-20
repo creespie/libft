@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:23:38 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 12:25:18 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "libft.h"
 
@@ -18,7 +30,7 @@ int	ft_set_sign(int *n)
 int	ft_count_malloc(int n)
 {
 	int	counter;
-	
+
 	counter = 0;
 	while (n > 0)
 	{
@@ -28,7 +40,7 @@ int	ft_count_malloc(int n)
 	return (counter);
 }
 
-void ft_fill(char *string, int n, int counter)
+void	ft_fill(char *string, int n, int counter)
 {
 	string[counter] = '\0';
 	counter--;
@@ -46,11 +58,10 @@ char	*ft_itoa(int n)
 	int		sign;
 	int		counter;
 
-
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
-		return(ft_strdup("0"));
+		return (ft_strdup("0"));
 	sign = ft_set_sign(&n);
 	counter = ft_count_malloc(n);
 	if (sign < 0)

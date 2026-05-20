@@ -1,19 +1,15 @@
-//
-// Description
-// Allocates (with malloc(3)) and returns a copy of ’s1’
-// with the characters specified in ’set’ 
-// removed from the beginning and the end of the string.
-//
-// Parameters
-// #1. The string to be trimmed.
-// #2. The reference set of characters to trim.
-//
-// Return
-// The trimmed string. NULL if the allocation fails.
-//
-// External functs.
-// Malloc
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/20 12:58:21 by lurossi           #+#    #+#             */
+/*   Updated: 2026/05/20 13:03:04 by lurossi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdlib.h>
 
@@ -25,7 +21,7 @@ int	ft_check_string(char const *string, char const letter)
 	while (string[i])
 	{
 		if (string[i] == letter)
-			return(1);
+			return (1);
 		i++;
 	}
 	return (0);
