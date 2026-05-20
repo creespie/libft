@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 13:03:13 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 14:18:11 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 15:27:38 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
+unsigned int	ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
 void			ft_bzero(void *s, size_t n);
