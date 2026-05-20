@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 12:48:48 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 12:48:48 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 14:15:15 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	ft_putendl_fd(char const *s, int fd)
 
 	i = 0;
 	while (s[i])
+	{
 		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 	ft_putchar('\n');
 }

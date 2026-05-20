@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 12:32:03 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 12:32:52 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 14:27:27 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ps2[i] != ps1[i])
-			return (ps2[i] - ps1[i]);
+			return (ps1[i] - ps2[i]);
 		i++;
 	}
 	return (0);

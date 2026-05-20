@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 12:48:52 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 12:48:53 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 14:15:20 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	ft_putstr(char const *s)
 
 	i = 0;
 	while (s[i])
+	{
 		ft_putchar(s[i]);
+		i++;
+	}
 	ft_putchar('\n');
 }
