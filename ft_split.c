@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 12:49:52 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 12:49:53 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 16:40:09 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,11 @@ char	**ft_split(char const *string, char c)
 	index_words = 0;
 	word_count = ft_count_words(string, c);
 	if (word_count == 0)
-		return (NULL);
+	{
+		mat = malloc(1 * sizeof(char *));
+		mat[0] = NULL;
+		return (mat);
+	}
 	mat = malloc((word_count + 1) * sizeof(char *));
 	if (!mat)
 		return (NULL);

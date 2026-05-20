@@ -6,7 +6,7 @@
 /*   By: lurossi <lurossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 12:28:50 by lurossi           #+#    #+#             */
-/*   Updated: 2026/05/20 12:29:55 by lurossi          ###   ########.fr       */
+/*   Updated: 2026/05/20 17:18:29 by lurossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*copy;
 	t_list	*check;
 
-	if (lst == NULL)
+	if (!lst || !f || !del)
 		return (NULL);
-	copy = ft_lstnew(f(lst->content));
-	if (!copy)
-		return (NULL);
-	lst = lst->next;
+	copy = NULL;
 	while (lst != NULL)
 	{
 		check = ft_lstnew(f(lst->content));
@@ -31,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&copy, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&copy, ft_lstnew(f(lst->content)));
+		ft_lstadd_back(&copy, check);
 		lst = lst->next;
 	}
 	return (copy);
